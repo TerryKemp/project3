@@ -11,7 +11,7 @@ class MyCities extends Component {
       <div>
         <h1>My Cities</h1>
         <div className="citybox">
-          <p>City 1</p>
+          <p className="city">City 1</p>
           <div>
             <p>
               {/* {(() => {
@@ -31,21 +31,21 @@ class MyCities extends Component {
           </div>
         </div>
         <div className="citybox">
-          <p>City 2</p>
+          <p className="city">City 2</p>
           <div>
             <p>UV Index</p>
             <p>Air Pollution</p>
           </div>
         </div>
         <div className="citybox">
-          <p>City 3</p>
+          <p className="city">City 3</p>
           <div>
             <p>UV Index</p>
             <p>Air Pollution</p>
           </div>
         </div>
         <div className="citybox">
-          <p>City 4</p>
+          <p className="city">City 4</p>
           <div>
             <p>UV Index</p>
             <p>Air Pollution</p>
