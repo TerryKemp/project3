@@ -3,9 +3,11 @@ import React from 'react';
 class Form extends React.Component{
     render(){
         return (
-            <div> 
-                Form Goes Here 
-            </div>
+            <form onSubmit={this.props.getUV}>
+                <input type='text' name='lat' placeholder='latitude'/>
+                <input type='text' name='lon' placeholder='longitude'/>
+                <button> Get UV Index </button>
+            </form>
         );
     }
 };
