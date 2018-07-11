@@ -5,7 +5,7 @@ class Titles extends React.Component{
         return (
             <div>
                 <h1>Heir Pollution</h1>
-                <p>You have inherited the problems from past misconduct</p>
+                <p>UV and Air Quality Alerts</p>
 
             </div>
         )

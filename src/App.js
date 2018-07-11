@@ -16,7 +16,7 @@ class App extends React.Component {
         error: undefined
     }
 
-//Get UV index
+    //Get UV index
     getUV =  async (e) => {
         e.preventDefault();
         const lat = e.target.elements.lat.value;
