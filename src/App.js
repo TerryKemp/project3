@@ -1,20 +1,41 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Route, Link } from "react-router-dom";
+import UVIndex from "./components/UV/UVIndex";
+import MyCities from "./components/MyCities/MyCities";
 
 class App extends Component {
-  render () {
+  render() {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src='http://www.coresponsibility.com/wp-content/uploads/2016/06/air-pollution_cropped.jpg' className='App-logo' alt='logo' />
-          <h1 className='App-title'>HEIR POLLUTION</h1>
+      <div className="App">
+        <header className="App-header">
+          <img
+            src="http://www.coresponsibility.com/wp-content/uploads/2016/06/air-pollution_cropped.jpg"
+            className="App-logo"
+            alt="logo"
+          />
+          <h1 className="App-title">HEIR POLLUTION</h1>
         </header>
-        <p className='App-intro'>
-                        WELCOME TO HEIR POLLUTION.WHERE YOU HAVE INHERITED THE PREVIOUS GENERATIONS PROBLEMS < /p>
+        <nav>
+          <Link to={"/UVIndex"} component={UVIndex}>
+            UV Index{" "}
+          </Link>
+          <Link to={"/MyCities"} component={MyCities}>
+            My Cities
+          </Link>
+        </nav>
+        <Route path="/UVIndex" component={UVIndex} />
+        <Route path="/MyCities" component={MyCities} />
+        <body>
+          <p className="App-intro">
+            WELCOME TO HEIR POLLUTION.WHERE YOU HAVE INHERITED THE PREVIOUS
+            GENERATIONS PROBLEMS{" "}
+          </p>
+        </body>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

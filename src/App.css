@@ -22,9 +22,33 @@
 .App-intro {
   font-size: large;
 }
-
-/* @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.citybox {
+  width: auto;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+/* .city {
+  align-items: center;
 } */
-
+.low {
+  background-color: #289500;
+  color: white;
+}
+.moderate {
+  background-color: #f7e400;
+  color: white;
+}
+.high {
+  background-color: #f85900;
+  color: white;
+}
+.veryhigh {
+  background-color: #d8001d;
+  color: white;
+}
+.extreme {
+  background-color: #6b49c8;
+  color: white;
+}
