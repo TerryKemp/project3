@@ -17,11 +17,11 @@ body {
 .App {
   text-align: center;
   align-items: center;
-  display: flex;
+  display: block;
   height: 100vh;
   justify-content: center;
   width: 100vw;
-  position: absolute;
+  position: center;
   top: 0;
   left: 0;
 }
@@ -334,6 +334,7 @@ button:active {
   font-size: 1.5em;
 }
 
-.App-intro {
+.App-header{
   font-size: large;
+  text-align: center;
 }

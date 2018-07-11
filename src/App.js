@@ -41,13 +41,24 @@ class App extends Component {
 		return(
 			
 			<div className="App">
+				<div>
+				        <header className='App-header'>
+          <img src='https://www.shareicon.net/download/2016/07/09/118949_virus_512x512.png'
+            className='App-logo'
+            alt='logo' />
+          <h1 className='App-title'>HEIR POLLUTION</h1>
+        </header>
+        <p className='App-intro'>
+                        WELCOME TO HEIR POLLUTION.  WHERE YOU HAVE INHERITED THE PREVIOUS GENERATIONS PROBLEMS </p>
+
+		</div>
 				<ReactCSSTransitionGroup 
 					transitionName="example"
 					transitionEnterTimeout={500}
 					transitionLeaveTimeout={300}>
 						{child}
 				</ReactCSSTransitionGroup>
-		
+			
 			</div>
 		);
 	}
