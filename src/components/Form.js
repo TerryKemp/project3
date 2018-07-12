@@ -6,7 +6,7 @@ class Form extends React.Component{
             <form onSubmit={this.props.getUV}>
                 <input type='text' name='lat' placeholder='latitude'/>
                 <input type='text' name='lon' placeholder='longitude'/>
-                <button> Get UV Index </button>
+                <button className='uv'> Get UV Index </button>
             </form>
         );
     }
