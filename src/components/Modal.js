@@ -13,6 +13,10 @@ class Modal extends Component {
 			wasClickedLeft: false,
 			wasClickedRight: false,
 		};
+		this.onReset = this.onReset.bind(this)
+		this.onClickLeft = this.onClickLeft.bind(this)
+		this.onClickRight =this.onClickRight.bind(this)
+
 	}
 
 	onReset = () => {
