@@ -8,7 +8,7 @@ import Indices from './components/Indices.js';
 const API_KEY = 'cad2d6dddccc9804f43e7c3af9e56f52';
 
 
-class App extends React.Component {
+class Heir extends React.Component {
     state = {
         lat: undefined,
         lon: undefined,
@@ -63,6 +63,6 @@ class App extends React.Component {
     }
 }
 
-export default App
+export default Heir
 
 
