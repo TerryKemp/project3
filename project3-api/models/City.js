@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 // mongoose.connect("mongodb://localhost:27017/heir-pollution");
 
-const City = new Schema({
+const CitySchema = new Schema({
   "City-Name": String,
   Country: String,
   Lat: Number,
@@ -12,7 +12,7 @@ const City = new Schema({
   //   "AQ-Index": Number
 });
 
-var City = mongoose.model("City", City);
-// module.exports = {
-//   City: mongoose.model("City", City)
-// };
+// var City = mongoose.model("City", CitySchema);
+module.exports = {
+  City: mongoose.model("City", City)
+};

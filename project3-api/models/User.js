@@ -8,6 +8,6 @@ const UserSchema = new Schema({
   "My-Cities": Number
 });
 
-var User = mongoose.model("User", UserSchema);
+mongoose.model("User", UserSchema);
 
-// module.exports = mongoose;
+module.exports = mongoose;
