@@ -12,6 +12,9 @@ class App extends Component {
 		this.state = {
 			mounted: false
 		};
+
+		this.handleLogin = this.handleLogin.bind(this)
+		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
 	componentDidMount() {
@@ -21,7 +24,34 @@ class App extends Component {
 	handleSubmit = (e) => {
 		this.setState({ mounted: false });
 		e.preventDefault();
+		axios.post("http://localhost3001/SignUp", {
+			email: this.state.email,
+			password: this.state.password
+		})
+		.then(res => {
+			localStorage.token = res.data.token
+			this.setState ({ isLoggedIn: true})
+		})
+		.catch(err => console.log(err))
 	}
+
+		handleLogin = (e) => {
+			this.setState({
+				mounted: false
+			});
+			e.preventDefault();
+			axios.post("http://localhost3001/LoginIn", {
+					email: this.state.email,
+					password: this.state.password
+				})
+				.then(res => {
+					localStorage.token = res.data.token
+					this.setState({
+						isLoggedIn: true
+					})
+				})
+				.catch(err => console.log(err))
+		}
 
 	render() {
 		const {mounted} = this.state;
