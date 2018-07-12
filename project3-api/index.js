@@ -6,4 +6,4 @@ const config = require("./config/config");
 const User = mongoose.model("User");
 const app = express();
 
-app.use(require("./routes/index.js"));
+app.set("port", process.env.PORT || 3001);

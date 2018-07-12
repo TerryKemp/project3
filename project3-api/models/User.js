@@ -1,17 +1,13 @@
 const mongoose = require("../db/connection");
+var Schema = mongoose.Schema;
 
-const User = new mongoose.Schema({
+const UserSchema = new Schema({
   Username: String,
   Email: String,
   Password: String,
-  "Favorite-Cities": [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "MyCities"
-    }
-  ]
+  "My-Cities": Number
 });
 
-mongoose.model("User", User);
+var User = mongoose.model("User", UserSchema);
 
-module.exports = mongoose;
+// module.exports = mongoose;

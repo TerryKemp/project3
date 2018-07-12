@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
-import "./App.css";
+import "./Data.css";
 import { Route, Link } from "react-router-dom";
 import UVIndex from "./components/UV/UVIndex";
 import MyCities from "./components/MyCities/MyCities";
 
-class App extends Component {
+class Data extends Component {
   render() {
     return (
       <div className="App">
@@ -38,4 +38,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Data;

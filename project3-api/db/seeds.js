@@ -1,22 +1,11 @@
-const mongoose = require("./models");
+const mongoose = require("../models/User");
 const User = mongoose.model("User");
-const { CLIENT_URL } = require("./weather-data.js");
+const City = mongoose.model("City");
+const weatherData = require("./weather-data.json");
 
-axios
-  .get(CLIENT_URL, {
-    method: "GET",
-    headers: {
-      Accept: "application/json"
-    }
-  })
-  .then(res => {
-    console.log(res.data);
-    this.setState({ uvNum: res.data });
-  });
-
-User.remove({})
+UserSchema.remove({})
   .then(() => {
-    User.collection.insert(userData).then(user => {
+    UserSchema.collection.insert(userData).then(user => {
       console.log(user);
       process.exit();
     });
@@ -25,12 +14,25 @@ User.remove({})
     console.log(err);
   });
 
-City.remove({})
+CitySchema.remove({})
   .then(() => {
-    City.collection.insert(weatherData).then(weather => {
-      console.log(weather);
-      process.exit();
-    });
+    fetch(weatherData, {
+      method: "GET",
+      headers: {
+        Accept: "application/json"
+      }
+    })
+      .then(res.json())
+      .then(res => {
+        console.log(res);
+        return { uvNum: res };
+      })
+      .then(res => {
+        CitySchema.collection.insert(res).then(weather => {
+          console.log(weather);
+          process.exit();
+        });
+      });
   })
   .catch(err => {
     console.log(err);
