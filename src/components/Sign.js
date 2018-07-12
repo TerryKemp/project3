@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import '../App.css'
 import {MdAccountCircle, MdAddCircle} from 'react-icons/lib/md'
 
-
-
 const Sign = (props) => {
   let icon = null
 
@@ -15,10 +13,10 @@ const Sign = (props) => {
   }
 
   return (
-    <div onClick={props.onChange} className={props.type == 'signIn' ? 'signIn' : 'signUp'}>
+    <div onClick={props.onChange} className={props.type === 'signIn' ? 'signIn' : 'signUp'}>
       <div className='center'>
         {icon}
-        <p>{props.type == 'signIn' ? 'SIGN IN' : 'SIGN UP'}</p>
+        <p>{props.type === 'signIn' ? 'SIGN IN' : 'SIGN UP'}</p>
       </div>
     </div>
   )
