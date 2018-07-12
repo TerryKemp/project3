@@ -21,7 +21,7 @@ app.use("/users", userController);
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/client/build/index/html");
 });
-
+//  Create new user
 app.post("/SignUp", (req, res) => {
   if (req.body.email && req.body.password) {
     let newUser = {
@@ -51,7 +51,7 @@ app.post("/SignUp", (req, res) => {
     res.sendStatus(401);
   }
 });
-
+// Allow user to Login
 app.post("/LogIn", (req, res) => {
   if (req.body.email && req.body.password) {
     let user = {
