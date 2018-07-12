@@ -32,7 +32,7 @@ body {
   justify-content: flex-start;
 }
 .Modal {
-  width: 200px;
+  width: 300px;
   height: 500px;
   display: flex;
   flex-direction: row;
