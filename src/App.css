@@ -32,14 +32,14 @@ body {
   justify-content: flex-start;
 }
 .Modal {
-  width: 700px;
+  width: 300px;
   height: 500px;
   display: flex;
   flex-direction: row;
   box-shadow: 0 6px 10px 0px rgba(0, 0, 0, 0.5);
   flex-grow: 5;
 }
-.NavigationPanel {
+/* .NavigationPanel {
   background-color: rgba(244, 246, 248, 0.98);
   width: 80px;
   color: rgb(64, 70, 86);
@@ -50,7 +50,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-}
+} */
 .back {
   flex: 2;
 }
