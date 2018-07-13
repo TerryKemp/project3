@@ -12,9 +12,9 @@ router.post("/SignUp", (req, res) => {
       email: req.body.email,
       password: req.body.password
     };
-    User.findOne({ email: req.body.email }).then(user => {
+    UserSchema.findOne({ email: req.body.email }).then(user => {
       if (!user) {
-        User.create(newUser).then(user => {
+        UserSchema.create(newUser).then(user => {
           if (user) {
             var payload = {
               id: newUser.id
