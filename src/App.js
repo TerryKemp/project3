@@ -22,7 +22,7 @@ class App extends Component {
 		this.setState({ mounted: true });
 	}
 	
-	handleSubmit = (e) => {
+	handleSubmit (e) {
 		this.setState({ mounted: false });
 		e.preventDefault();
 		axios.post("http://localhost3001/SignUp", {
