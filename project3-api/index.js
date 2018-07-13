@@ -13,7 +13,7 @@ const User = mongoose.model("User");
 const app = express();
 
 app.set("port", process.env.PORT || 3001);
-app.use(cors())
+app.use(cors());
 app.use(parser.json());
 app.use(passport.initialize());
 
@@ -29,6 +29,7 @@ app.post("/SignUp", (req, res) => {
       email: req.body.email,
       password: req.body.password
     };
+    console.log(newUser);
     User.findOne({ email: req.body.email }).then(user => {
       if (!user) {
         User.create(newUser).then(user => {
@@ -41,17 +42,17 @@ app.post("/SignUp", (req, res) => {
               token: token
             });
           } else {
-            console.log('Its here')
+            console.log("Its here");
             res.sendStatus(401);
           }
         });
       } else {
-        console.log('No here')
+        console.log("No here");
         res.sendStatus(401);
       }
     });
   } else {
-    console.log('try here1')
+    console.log("try here1");
     res.sendStatus(401);
   }
 });
@@ -63,7 +64,7 @@ app.post("/LogIn", (req, res) => {
       password: req.body.password
     };
   } else {
-    console.log('login problem')
+    console.log("login problem");
     res.sendStatus(401);
   }
   User.findOne({ email: req.body.email }).then(user => {
@@ -77,11 +78,11 @@ app.post("/LogIn", (req, res) => {
           token: token
         });
       } else {
-        console.log('token problem')
+        console.log("token problem");
         res.sendStatus(401);
       }
     } else {
-      console.log('user problem')
+      console.log("user problem");
       res.sendStatus(401);
     }
   });
