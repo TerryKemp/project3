@@ -3,6 +3,10 @@ const User = mongoose.model("User");
 const City = mongoose.model("City");
 const weatherData = require("./weather-data.json");
 
+
+const dbURI = process.env.MONGODB_URI || 'mongodb://localhost/heir-pollution'
+mongoose.connect(dbURI)
+
 UserSchema.remove({})
   .then(() => {
     UserSchema.collection.insert(userData).then(user => {

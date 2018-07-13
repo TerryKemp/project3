@@ -87,6 +87,8 @@ app.post("/LogIn", (req, res) => {
   });
 });
 
-app.listen(app.get("port"), () => {
-  console.log("Server listening on port " + app.get("port"));
-});
+app.listen(process.env.PORT || 3001)
+console.log('It listens')
+// app.listen(app.get("port"), () => {
+//   console.log("Server listening on port " + app.get("port"));
+// });
